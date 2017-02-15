@@ -20,6 +20,8 @@ angular.module('infrushare')
 
       var devices_query = "设备名称 LIKE '%25"+$scope.query+"%25'";
       getTotalDevices(devices_query,function(data){
+        console.log(data.data);
+
         $scope.total_devices = data.data[0].total;
 
         // pagination initialisation
