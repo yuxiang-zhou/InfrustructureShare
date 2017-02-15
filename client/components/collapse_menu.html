@@ -1,0 +1,22 @@
+<div class='department'>
+
+  <span ng-repeat="data in (filteredDepts = (departments|filter:{level:level+1,parent_no:dept.dept_no}))"></span>
+
+  <!-- <a class="btn btn-primary btn-small" role="button" data-toggle="collapse" href="#dept_id_{{dept.dept_no}}" aria-expanded="false" aria-controls="dept_id_{{dept.dept_no}}">
+    <span ng-if='filteredDepts.length > 0'> > </span><span>{{dept.dept_name}}</span>
+  </a> -->
+
+  <!-- <button ng-if='filteredDepts.length > 0' class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#dept_id_{{dept.dept_no}}" aria-expanded="false" aria-controls="dept_id_{{dept.dept_no}}">
+    >
+  </button> -->
+
+  <i class="glyphicon" ng-if='filteredDepts.length > 0' class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#dept_id_{{dept.dept_no}}" aria-expanded="false" aria-controls="dept_id_{{dept.dept_no}}" ng-click="isCollapsed = !isCollapsed" ng-class="{'glyphicon-chevron-right': !isCollapsed, 'glyphicon-chevron-down': isCollapsed}"></i>
+
+  <span>{{dept.dept_name}}</span>
+
+  <div class="collapse" id="dept_id_{{dept.dept_no}}" ng-if='filteredDepts.length > 0'>
+    <ul class='list-group'>
+      <li class='list-group-item' ng-repeat='d in filteredDepts'><deptmenu departments=departments dept=d level=d.level></deptmenu></li>
+    </ul>
+  </div>
+</div>
