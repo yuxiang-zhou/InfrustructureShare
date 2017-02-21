@@ -1,0 +1,218 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="myModalLabel">设备基本信息</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-sm-2">
+      设备基本信息
+    </div>
+    <div ng-if='isloading' class="col-sm-10">
+      Loading
+    </div>
+    <div ng-if='!isloading' class="col-sm-10">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">设备名称</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.name}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">资产性质</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.property}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">数量</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.quantity}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">单价</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.price}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">设备型号</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.version}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">设备规格</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.size}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">设备类型</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.device_type_name}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">领用单位</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.dept_name}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">厂家</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.made_in}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">供货商</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.supplier}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">出厂日期</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.product_date}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">购置日期</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.purchase_date}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">国别码</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.country_reg_no}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">主要附件</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.attachment}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">所属项目</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.project}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">分类号</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.device_type_no}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">设备来源</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.source}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">使用方向</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.purpose}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">领用人</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.user_name}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">管理人</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.manager_name}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">使用年限</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.date_limit}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">保修期</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.warranty}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">存放地点</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.storage}}' />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group">
+            <span class="input-group-addon">存放校区</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.campus}}' />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon">备注</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon3" value='{{selected_device.comments}}' />
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" ng-click="cancel()">关闭</button>
+</div>

@@ -4,9 +4,15 @@ angular.module('infrushare').directive('deptmenu', function(){
     scope: {
       departments: '=',
       dept: '=',
-      level: '='
+      level: '=',
+      onFilter: '&'
     },
     restrict: 'E',
-    replace: true
+    replace: true,
+    controller: function($scope) {
+      $scope.filter = function(dept_no) {
+        $scope.onFilter({'message':dept_no});
+      };
+  }
   }
 });

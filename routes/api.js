@@ -7,10 +7,7 @@ var config = {
     user: 'sa',
     password: 'Yunnandaxue083309',
     server: '202.203.208.82',
-    options: {
-        encrypt: true // Use this if you're on Windows Azure
-    }
-
+    database: 'URP'
 }
 
 var general_query = function(dbname,tablename,row,fields,from,to,condition,handler,error_handler){

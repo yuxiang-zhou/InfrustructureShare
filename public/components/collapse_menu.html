@@ -12,11 +12,11 @@
 
   <i class="glyphicon" ng-if='filteredDepts.length > 0' class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#dept_id_{{dept.dept_no}}" aria-expanded="false" aria-controls="dept_id_{{dept.dept_no}}" ng-click="isCollapsed = !isCollapsed" ng-class="{'glyphicon-chevron-right': !isCollapsed, 'glyphicon-chevron-down': isCollapsed}"></i>
 
-  <span>{{dept.dept_name}}</span>
+  <a ng-click='filter({message:dept.dept_no})'>{{dept.dept_name}}</a>
 
   <div class="collapse" id="dept_id_{{dept.dept_no}}" ng-if='filteredDepts.length > 0'>
     <ul class='list-group'>
-      <li class='list-group-item' ng-repeat='d in filteredDepts'><deptmenu departments=departments dept=d level=d.level></deptmenu></li>
+      <li class='list-group-item' ng-repeat='d in filteredDepts'><deptmenu departments=departments dept=d level=d.level on-filter='filter(message)'></deptmenu></li>
     </ul>
   </div>
 </div>
