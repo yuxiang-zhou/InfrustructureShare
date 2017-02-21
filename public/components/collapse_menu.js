@@ -10,8 +10,8 @@ angular.module('infrushare').directive('deptmenu', function(){
     restrict: 'E',
     replace: true,
     controller: function($scope) {
-      $scope.filter = function(dept_no) {
-        $scope.onFilter({'message':dept_no});
+      $scope.filter = function(dept) {
+        $scope.onFilter({'message':dept});
       };
   }
   }

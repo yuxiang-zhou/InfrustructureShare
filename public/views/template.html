@@ -36,9 +36,6 @@
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon3">部门选择</span>
             <input type="text" class="form-control" id="basic-url" ng-model="query_department">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="button" ng-click='getQueryData()'>搜索</button>
-            </span>
           </div>
           <hr/>
           <div ng-if='!query_department'>
@@ -61,7 +58,7 @@
     <div class="col-sm-9">
       <div class="panel panel-default fix_height_container">
         <!-- Default panel contents -->
-        <div class="panel-heading">大型设备信息</div>
+        <div class="panel-heading">大型设备信息<span ng-if='filter_dept'> - {{filter_dept.dept_name}}</span></div>
         <div class="panel-body">
           <p>共有设备:{{total_devices}}</p>
           <div class="input-group">
