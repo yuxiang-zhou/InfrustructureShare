@@ -13,6 +13,6 @@ angular.module('infrushare').directive('deptmenu', function(){
       $scope.filter = function(dept) {
         $scope.onFilter({'message':dept});
       };
-  }
+    }
   }
 });

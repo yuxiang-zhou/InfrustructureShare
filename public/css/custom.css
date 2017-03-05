@@ -24,6 +24,15 @@
   max-width: 1250px;
 }
 
+li { cursor: pointer; }
+.table_sf tbody tr {
+  cursor: pointer;
+}
+
+.table_sf tbody tr:hover {
+  background-color: #AAAAAA;
+}
+
 .department_container {
   height: 760px;
   overflow-x: hidden;
