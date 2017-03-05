@@ -49,9 +49,9 @@ angular.module('infrushare')
         $scope.page_cache.query = ($scope.query + ',' + $scope.query_department_no);
       }
 
-      var devices_query = "设备名称 LIKE '%25"+$scope.query+"%25'";
+      var devices_query = "a.设备名称 LIKE '%25"+$scope.query+"%25'";
       devices_query += " AND ";
-      devices_query += "部门代码 LIKE '"+$scope.query_department_no+"%25'";
+      devices_query += "a.部门代码 LIKE '"+$scope.query_department_no+"%25'";
       getTotalDevices(devices_query,function(data){
         console.log(data.data);
 
